@@ -6,8 +6,8 @@ const contactsCtrl = require("../../controllers/api/contacts");
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // POST /api/contact
-router.post('/', contactsCtrl.create);
+router.post('/contacts', contactsCtrl.create);
 // POST /api/users/contact
-router.post('/NewContact', contactsCtrl.login);
+// router.post('/contacts/NewContact', contactsCtrl.login);
 
 module.exports = router;

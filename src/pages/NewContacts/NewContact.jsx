@@ -9,24 +9,31 @@ export default function NewContact() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    firstName: user.firstName,
-    lastName: user.lastName,
-    email: user.email,
-    company: user.company,
-    role: user.company
+    // firstName: user.firstName,
+    // lastName: user.lastName,
+    // email: user.email,
+    // company: user.company,
+    // role: user.company
+
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    role: ""
   });
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     try {
       
-      const user = signUp(formData);
+      const user = await signUp(formData);
+      console.log(user)
       this.props.setUser(user);
-    } catch {
+    } catch (error){
       // An error occurred, like a dup email address
       this.setState({ error: 'Sign Up Failed - Try Again' });
     }
