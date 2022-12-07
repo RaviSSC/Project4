@@ -12,3 +12,7 @@ role : String,
 
 })
 module.exports = mongoose.model("Contacts", contacts)
+
+ //This model is for the schema for the new networking contacts
+ 
+ //Anothe model is necessary for the contact strategy input

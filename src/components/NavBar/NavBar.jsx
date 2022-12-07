@@ -20,3 +20,5 @@ export default function NavBar({ user, setUser }) {
     </nav>
   );
 }
+
+//Have to add links to All pages, the New Contacts, All contacts, NewStrategy, ImplementedStreegy
