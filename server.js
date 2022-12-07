@@ -27,6 +27,7 @@ const port = process.env.PORT ||  3001;
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/', require('./routes/api/users'));
 
+app.use('/api/contact', require('./routes/api/contact'));
 
 
 

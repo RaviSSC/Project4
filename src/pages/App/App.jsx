@@ -19,7 +19,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path='/contacts/new' element={<NewContact />} />
+            <Route path='/contacts/new' element={<NewContact  user={user} setUser={setUser}/>} />            
             <Route path='/contacts' element={<AllContact />} />
             <Route path='/strategy/new' element={<NewStrategy />} />
             <Route path='/strategy' element={<CurrentStrategy/>} />
