@@ -11,7 +11,7 @@ role : String,
 
 
 })
-module.exports = mongoose.model("Contacts", contacts)
+module.exports = mongoose.model("contacts", contacts)
 
  //This model is for the schema for the new networking contacts
  
