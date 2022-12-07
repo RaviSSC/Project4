@@ -1,18 +1,19 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { getUser } from '../../utilities/users-service';
-
+import { getUser } from "../../utilities/users-service";
+import { signUp } from "../../utilities/contact/contact";
 
 export default function NewContact() {
   const [user, setUser] = useState(getUser());
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    firstName: user.firstname,
-    lastName: user.lastname,
+    firstName: user.firstName,
+    lastName: user.lastName,
     email: user.email,
+    company: user.company,
+    role: user.company
   });
 
   function handleChange(e) {
@@ -21,9 +22,18 @@ export default function NewContact() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    try {
+      
+      const user = signUp(formData);
+      this.props.setUser(user);
+    } catch {
+      // An error occurred, like a dup email address
+      this.setState({ error: 'Sign Up Failed - Try Again' });
+    }
+    console.log(formData)
   }
   function handleCancel() {
-    navigate('../App/App');
+    navigate("../App/App");
   }
 
   return (
@@ -41,14 +51,10 @@ export default function NewContact() {
             onChange={handleChange}
           />
         </div>
-
-
-
-
         <div className="contact-form">
           <label>Last Name</label>
           <input
-            name="lastname"
+            name="lastName"
             type="text"
             required
             value={formData.lastname}
@@ -86,12 +92,6 @@ export default function NewContact() {
             onChange={handleChange}
           />
         </div>
-
-
-
-
-
-
         <div className="btn-group">
           <input type="submit" value="Submit" className="btn btn-primary" />
           <button
