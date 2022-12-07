@@ -1,8 +1,8 @@
-export default function NewContact() {
+export default function NewOrderPage() {
 
 
 
   return (
-    <h1>Add New Contact Page</h1>
+    <h1>NewOrderPage</h1>
   );
 }
