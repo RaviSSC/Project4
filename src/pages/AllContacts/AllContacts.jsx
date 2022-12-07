@@ -1,8 +1,8 @@
-export default function OrderHistoryPage() {
+export default function AllContacts() {
 
   return (
     <>
-      <h1>OrderHistoryPage</h1>
+      <h1>All Contacts listed</h1>
     </>
   );
 }

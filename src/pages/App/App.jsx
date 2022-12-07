@@ -4,6 +4,8 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewContact from '../NewContacts/NewContact';
 import AllContact from '../AllContacts/AllContacts';
+import CurrentStrategy from '../CurrentStrategies/CurrentStrategies';
+import NewStrategy from '../NewStrategy/NewStrategy'
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 
@@ -19,6 +21,9 @@ export default function App() {
             {/* Route components in here */}
             <Route path='/contacts/new' element={<NewContact />} />
             <Route path='/contacts' element={<AllContact />} />
+            <Route path='/strategy/new' element={<NewStrategy />} />
+            <Route path='/strategy' element={<CurrentStrategy/>} />
+            
           </Routes>
         </>
         :
