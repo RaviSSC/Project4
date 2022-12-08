@@ -1,7 +1,7 @@
 Include the following sections within the README.md:
 
 ☐ App Title: Contains a description of what the app does and optional background info.
-☐ NetWORKER
+☐ NetWORKER A MERN full stack app
 
 
 
