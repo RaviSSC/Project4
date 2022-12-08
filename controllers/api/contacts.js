@@ -19,15 +19,15 @@ async function create(req, res) {
 async function getContact(req, res) {
   const { chatId } = req.params;
   try {
-    const result = await Message.find ({ContactId })
+    const result = await Contact.find ({ContactId })
     res.status(200).json(result);
   } catch (error) {
     res.status(500).json(error);
   }
 }
 async function deleteContact(req, res){
-  const {messageId} = req.params
-  await Message.findByIdAndDelete(ContactId)
+  const {ContactId} = req.params
+  await Contact.findByIdAndDelete(ContactId)
   res.status(200).json("Message Deleted")
 }
 

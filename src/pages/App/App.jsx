@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewContact from '../NewContacts/NewContact';
+import ContactList from '../../components/ContactItem/ContactItem';
 import AllContact from '../AllContacts/AllContacts';
 import CurrentStrategy from '../CurrentStrategies/CurrentStrategies';
 import NewStrategy from '../NewStrategy/NewStrategy'
@@ -20,7 +21,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path='/contacts/new' element={<NewContact  user={user} setUser={setUser}/>} />            
-            <Route path='/contacts' element={<AllContact />} />
+            <Route path='/contacts' element={<ContactList />} />
             
 
 

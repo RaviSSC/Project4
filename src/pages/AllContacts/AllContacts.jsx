@@ -1,8 +1,18 @@
-export default function AllContacts() {
+import React from "react";
+import contact from "../../components/ContactItem/ContactItem";
+// import contacts from "../../../controllers/api/contacts";
 
+
+
+export default function allContacts({user}) {
   return (
     <>
-      <h1>All Contacts listed</h1>
+      <div>
+        List of All
+      </div>
+      <div>
+        <contacts user={user}/>
+      </div>
     </>
   );
 }

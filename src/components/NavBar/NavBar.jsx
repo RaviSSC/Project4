@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
+import "./Navbar.css";
 
 export default function NavBar({ user, setUser }) {
 
@@ -9,12 +10,11 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
+    <nav id="navbar">
       &nbsp; | &nbsp;
       Welcome, {user.name}
       &nbsp;  &nbsp;
-      &nbsp;  &nbsp;
-      &nbsp;  &nbsp;
+     
       <Link to='/strategy'>Current strategy</Link>
       &nbsp; | &nbsp;
       <Link to='/strategy/new'>NewStrategy</Link>

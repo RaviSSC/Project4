@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { getUser } from "../../utilities/users-service";
 import { signUp } from "../../utilities/contact/contact";
+import styled from 'styled-components';
+
 
 export default function NewContact() {
   const [user, setUser] = useState(getUser());
