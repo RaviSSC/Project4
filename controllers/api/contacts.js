@@ -14,7 +14,32 @@ async function create(req, res) {
     res.status(400).json(error);
   }
 }
-module.exports ={create}
 
 
-//jhave to pass token
+async function getContact(req, res) {
+  const { chatId } = req.params;
+  try {
+    const result = await Message.find ({ContactId })
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+}
+async function deleteContact(req, res){
+  const {messageId} = req.params
+  await Message.findByIdAndDelete(ContactId)
+  res.status(200).json("Message Deleted")
+}
+
+//getAllUsers
+async function getAllContact (req, res){
+  try {
+    const result = await Contact.find({})
+    res.status(200).json(result)
+  } catch (error) {
+    res.status(400).json(error)
+  }
+}
+  
+
+  module.exports ={create}
