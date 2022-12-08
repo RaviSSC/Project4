@@ -21,6 +21,9 @@ export default function App() {
             {/* Route components in here */}
             <Route path='/contacts/new' element={<NewContact  user={user} setUser={setUser}/>} />            
             <Route path='/contacts' element={<AllContact />} />
+            
+
+
             <Route path='/strategy/new' element={<NewStrategy />} />
             <Route path='/strategy' element={<CurrentStrategy/>} />
             
