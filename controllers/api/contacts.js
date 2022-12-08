@@ -9,7 +9,7 @@ async function create(req, res) {
     console.log(req.body)
     console.log(contact)
     res.status(200).json()
-    res.json(token)
+ 
   } catch (error) {
     res.status(400).json(error);
   }
