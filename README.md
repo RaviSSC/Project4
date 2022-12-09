@@ -30,3 +30,5 @@ Include the following sections within the README.md:
     A link to the Trello board used for the project's planning that includes user stories, wireframes & an ERD.
 
 ☐ Next Steps: Planned future enhancements (icebox items).
+
+make a bututton a contac )ut inside the call,   conenct button to a handle.delete function, and the handledelete should make a axios.delete /api/contacts/id   make the call with a backtick "${id}"

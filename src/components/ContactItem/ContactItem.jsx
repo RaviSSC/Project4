@@ -33,7 +33,7 @@ export default function ContactList() {
 	useEffect(function () {
 		async function getContacts() {
 			try {
-				const response = await axios.get("../../../controllers/api/contacts");
+				const response = await axios.get("/api/contacts");
 				setContacts(response.data);
 			} catch (error) {
 				console.log("error", error);
@@ -54,12 +54,12 @@ export default function ContactList() {
       </h2>
       <hr />
 
-      {contacts.map((Contacts) => {
+      {contacts.map((contact) => {
         return (
           <div
             className="card mb-3"
             style={{ maxWidth: "800px" }}
-            key={contacts._id}
+            key={contact._id}
           >
             <div className="row g-0">
               <div className="col-md-4 pl-5 ">
@@ -69,8 +69,8 @@ export default function ContactList() {
               <div className="col-md-8">
                 <div class="card-header">
                   <h5 className="card-title">
-                    <Link to={`/contact/${contacts._id}`} className="link-line">
-                      {contacts.firstname}
+                    <Link to={`/contact/${contact._id}`} className="link-line">
+                      {contact.firstName}
                     </Link>
                   </h5>
                 </div>
@@ -79,16 +79,16 @@ export default function ContactList() {
                     <i className="bi bi-telephone-fill text-success"></i>
                     <a
                       className="card-subtitle m-2"
-                      href={`tel:+${contacts.lastname}`}
+                      href={`tel:+${contact.lastName}`}
                     >
-                      {contacts.phone}
+                      {contact.phone}
                     </a>
                   </h6>
-                  <p className="card-text limit-char">{contacts.description}</p>
+                  <p className="card-text limit-char">{contact.company}</p>
                   <p className="card-text  d-flex align-items-center">
                     <i className="bi bi-geo-alt-fill text-warning"></i>
                     <small className="text-muted one-liner">
-                      {contacts.location}
+                      {contact.role}
                     </small>
                   </p>
 

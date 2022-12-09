@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
+import axios from 'axios';
 
 export default class SignUpForm extends Component {
   state = {
@@ -9,7 +10,7 @@ export default class SignUpForm extends Component {
     confirm: '',
     error: ''
   };
-
+// state being changed 
   handleChange = (evt) => {
     this.setState({
       [evt.target.name]: evt.target.value,
@@ -30,8 +31,22 @@ export default class SignUpForm extends Component {
       this.setState({ error: 'Sign Up Failed - Try Again' });
     }
   };
+  // state being changed
 
-  
+  // axios attempt
+register = async function register(){
+  // possible address error
+  console.log("in register function")
+  let res=await axios.post("http://localhost:3001/api/users", {
+    name:this.state.name,
+    email:this.state.email,
+    password:this.state.password,
+  }).catch((err)=>{
+    console.log(err)
+  })
+}
+  // axios attempt
+
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (

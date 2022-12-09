@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav id="navbar">
       &nbsp; | &nbsp;
-      Welcome, {user.name}
+      Welcome, {user.name} 
       &nbsp;  &nbsp;
      
       <Link to='/strategy'>Current strategy</Link>

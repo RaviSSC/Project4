@@ -21,6 +21,7 @@ async function login(req, res) {
 }
 
 async function create(req, res) {
+  console.log("In Create Function")
   try {
     const user = await User.create(req.body);
     // token is a string

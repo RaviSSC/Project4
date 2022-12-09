@@ -26,8 +26,8 @@ async function getContact(req, res) {
   }
 }
 async function deleteContact(req, res){
-  const {ContactId} = req.params
-  await Contact.findByIdAndDelete(ContactId)
+
+  await Contact.findByIdAndDelete(req.params.id)
   res.status(200).json("Message Deleted")
 }
 
@@ -42,4 +42,4 @@ async function getAllContact (req, res){
 }
   
 
-  module.exports ={create}
+  module.exports ={create, getAllContact, deleteContact}
