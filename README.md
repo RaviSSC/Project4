@@ -23,7 +23,15 @@ Include the following sections within the README.md:
 
 ☐ Getting Started: That Includes:
 
- ![Trello Board](https://imgur.com/gallery/ecWHIGi)  
+ ![Trello Board](./IMages/Trello.png)  
+
+ ![Login Page](./IMages/Login.png)
+ ![New Contacts](./IMages/NewUser.png)
+ ![Enter Contacts](./IMages/EnterNewContact.png)
+ ![See Cotacts](./IMages/Contact%20list.png)
+ 
+ 
+
 
  [Deployed App] () XXXXXXXXXXXXXXXXXXX)  
  
