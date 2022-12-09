@@ -5,13 +5,13 @@ Include the following sections within the README.md:
 
 
 ☐ Technologies Used: 
-    MongoDB & Mongoose
-    Express
-    ReactJS
-    Node
-    React Bootstrap
-    Git & GitHub
-    Axios
+   - MongoDB & Mongoose
+   - Express
+   - ReactJS
+   - Node
+   - React Bootstrap
+   - Git & GitHub
+   - Axios
 
 
 
