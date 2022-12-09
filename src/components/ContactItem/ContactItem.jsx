@@ -102,16 +102,3 @@ const onDelete=(id)=>{
     </div>
   );
 }
-
-  // return (
-  //   <Container>
-  //     <Row>
-  //       {this.contact ((contact, idx) => (
-  //         <>
-  //           <div>{contact.firstname}</div>
-  //           <div>{contact.lastname}</div>
-  //         </>
-  //       ))}
-  //     </Row>
-  //   </Container>
-  // );
