@@ -81,8 +81,8 @@ export default function ContactList() {
                       Position: {contact.role}
                     </small>
                   </p>
-                  <Link to="/Update">
-                    <button onClick={() => setData(contact.firstName ,contact.lastName ,contact.company, contact.role, contact.email )}>  Edit </button>
+                  <Link to="./Update">
+                    <button onClick={() => setID(contact.firstName ,contact.lastName ,contact.company, contact.role, contact.email )}>  Edit </button>
                   </Link>
 
 
