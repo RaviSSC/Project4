@@ -64,7 +64,7 @@ const onDelete=(id)=>{
           >
             <div className="row g-0">
               <div className="col-md-4 pl-5 ">
-                {/* <img src="..." className="img-fluid rounded-start" alt="..."> */}
+           
               </div>
               <div className="col-md-8">
                 <div class="card-header">
