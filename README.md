@@ -1,6 +1,6 @@
 Include the following sections within the README.md:
 
-☐ App Title: Contains a description of what the app does and optional background info.
+☐ App Title: 
 ☐ NetWORKER A MERN full stack app
 
 
@@ -17,12 +17,13 @@ Include the following sections within the README.md:
     Node
     React Bootstrap
     Git & GitHub
+    Axios
 
 
 
 ☐ Getting Started: That Includes:
 
- [Trello Board](https://trello.com/b/y9s0YG4m/project-4)  
+ ![Trello Board](https://imgur.com/ecWHIGi)  
  [Deployed App] () XXXXXXXXXXXXXXXXXXX)  
  
 
