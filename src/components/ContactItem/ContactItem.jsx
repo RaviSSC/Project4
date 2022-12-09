@@ -20,6 +20,7 @@ export default function ContactList() {
 		getContacts();
 	}, []);
 
+// aman thought the delete axios request would go here but isnt sure how to do it
 // get the id to delete/ edit item
 const setID=(_id)=>{
   console.log(_id)
@@ -64,7 +65,7 @@ const onDelete=(id)=>{
           >
             <div className="row g-0">
               <div className="col-md-4 pl-5 ">
-           
+                {/* <img src="..." className="img-fluid rounded-start" alt="..."> */}
               </div>
               <div className="col-md-8">
                 <div class="card-header">
@@ -86,13 +87,32 @@ const onDelete=(id)=>{
                     </small>
                   </p>
 
-              
+                {/* Aman tried to create edit and delete buttons but didnt remember how to 
+                add event handler */}
                   <button>Edit</button>
                   {/* pass in the id */}
                   <Link to="/:id"> 
                     <button onClick={()=>onDelete(contact._id)}>Delete</button>
                   </Link>
                   
+
+                  
+
+                  {/* <div class="card-footer">
+                    <Link
+                      to={`/cruds/${crud._id}/edit`}
+                      className="btn btn-primary"
+                    >
+                      Edit
+                    </Link>
+                    <span>
+                      <small>
+                        <Link to={`/cruds/${crud._id}`} className="link-line">
+                          Read More...
+                        </Link>
+                      </small>
+                    </span>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -102,3 +122,16 @@ const onDelete=(id)=>{
     </div>
   );
 }
+
+  // return (
+  //   <Container>
+  //     <Row>
+  //       {this.contact ((contact, idx) => (
+  //         <>
+  //           <div>{contact.firstname}</div>
+  //           <div>{contact.lastname}</div>
+  //         </>
+  //       ))}
+  //     </Row>
+  //   </Container>
+  // );
