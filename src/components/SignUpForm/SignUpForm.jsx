@@ -45,6 +45,8 @@ register = async function register(){
     console.log(err)
   })
 }
+
+
   // axios attempt
 
   render() {

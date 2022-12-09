@@ -31,6 +31,5 @@ Include the following sections within the README.md:
 
 ☐ Next Steps: Planned future enhancements (icebox items).
 
-make a bututton a contac )ut inside the call,   
-conenct button to a handle.delete function, 
-and the handledelete should make a axios.delete /api/contacts/id   make the call with a backtick "${id}"
+make a bututton a contac )ut inside the call,   conenct button to a handle.delete function, and the handledelete should make a axios.delete /api/contacts/id   make the call with a backtick "${id}"# current
+# current

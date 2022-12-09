@@ -1,5 +1,4 @@
 const { token } = require("morgan");
-// const contact = require("../../models/contact");
 const Contact = require("../../models/contact");
 
 
@@ -16,19 +15,11 @@ async function create(req, res) {
   }
 }
 
-// // // Update Detail by Id
-async function updateContact(req, res) {
-	try {
-    await contact.findByIdAndUpdate(req.params.id, req.body)
-		res.status(200).json("Uodated");
-  } catch(error) {
-			res.status(422).send(error);
-		};
-}
 
 async function getContact(req, res) {
+  const { chatId } = req.params;
   try {
-    const result = await Contact.find ({Contact })
+    const result = await Contact.find ({ContactId })
     res.status(200).json(result);
   } catch (error) {
     res.status(500).json(error);
@@ -36,8 +27,7 @@ async function getContact(req, res) {
 }
 async function deleteContact(req, res){
 
-  const result = await Contact.findByIdAndDelete(req.params.id)
-  console.log()
+  await Contact.findByIdAndDelete(req.params.id)
   res.status(200).json("Message Deleted")
 }
 
@@ -52,4 +42,4 @@ async function getAllContact (req, res){
 }
   
 
-  module.exports ={create, getAllContact, deleteContact, updateContact}
+  module.exports ={create, getAllContact, deleteContact}

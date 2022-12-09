@@ -1,25 +1,49 @@
-import React, { useEffect, useRef, useState, Component } from "react";
+import React, { useEffect, useRef, useState , Component} from "react";
 import Container from "react-bootstrap/Container";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
+
+
 export default function ContactList() {
-  const [contacts, setContacts] = useState([]);
-const {_id} = useParams();
+	const [contacts, setContacts] = useState([]);
 
-  useEffect(function () {
-    async function getContacts() {
-      try {
-        const response = await axios.get("/api/contacts");
-        setContacts(response.data);
-      } catch (error) {
-        console.log("error", error);
-      }
-    }
-    getContacts();
-  }, []);
+	useEffect(function () {
+		async function getContacts() {
+			try {
+				const response = await axios.get("/api/contacts");
+				setContacts(response.data);
+			} catch (error) {
+				console.log("error", error);
+			}
+		}
+		getContacts();
+	}, []);
 
-  // aman thought the delete axios request would go here but isnt sure how to do it
+// aman thought the delete axios request would go here but isnt sure how to do it
+// get the id to delete/ edit item
+const setID=(_id)=>{
+  console.log(_id)
+  localStorage.setItem("ID", _id)
+}
+
+// create function to get the data to delete
+
+const getData=()=>{
+  axios.get("/api/contacts")
+      .then((response)=>{
+        setContacts(response.data)
+      })
+}
+// delete function
+const onDelete=(id)=>{
+  axios.delete(`api/contacts/${id}`)
+  .then(()=>{
+    getData();
+  })
+}
+
+
   return (
     <div className="container">
       <h2>
@@ -52,38 +76,43 @@ const {_id} = useParams();
                   </h5>
                 </div>
                 <div className="card-body ">
-                  <p className="card-text limit-char">
-                    Company: {contact.company}
-                  </p>
+                  <h6 className="d-flex align-items-center">
+
+                  </h6>
+                  <p className="card-text limit-char">Company: {contact.company}</p>
                   <p className="card-text  d-flex align-items-center">
+                    <i className="bi bi-geo-alt-fill text-warning"></i>
                     <small className="text-muted one-liner">
                       Position: {contact.role}
                     </small>
                   </p>
-                  <p className="card-text  d-flex align-items-center">
-                    <i className="bi bi-geo-alt-fill text-warning"></i>
-                    <small className="text-muted one-liner">
-                      email: {contact.email}
-                    </small>
-                  </p>
-                  <p className="card-text  d-flex align-items-center">
-                    <i className="bi bi-geo-alt-fill text-warning"></i>
-                    <small className="text-muted one-liner">
-                      role: {contact.role}
-                    </small>
-                  </p>
 
-                  {/* Aman tried to create edit and delete buttons but didnt remember how to 
+                {/* Aman tried to create edit and delete buttons but didnt remember how to 
                 add event handler */}
                   <button>Edit</button>
-                  <Link
-											to={`api/contacts/${_id}/delete`}
-											className="btn btn-danger"
-										>
-											Delete
-										</Link>
+                  {/* pass in the id */}
+                  <Link to="/:id"> 
+                    <button onClick={()=>onDelete(contact._id)}>Delete</button>
+                  </Link>
+                  
 
-                
+                  
+
+                  {/* <div class="card-footer">
+                    <Link
+                      to={`/cruds/${crud._id}/edit`}
+                      className="btn btn-primary"
+                    >
+                      Edit
+                    </Link>
+                    <span>
+                      <small>
+                        <Link to={`/cruds/${crud._id}`} className="link-line">
+                          Read More...
+                        </Link>
+                      </small>
+                    </span>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -94,3 +123,15 @@ const {_id} = useParams();
   );
 }
 
+  // return (
+  //   <Container>
+  //     <Row>
+  //       {this.contact ((contact, idx) => (
+  //         <>
+  //           <div>{contact.firstname}</div>
+  //           <div>{contact.lastname}</div>
+  //         </>
+  //       ))}
+  //     </Row>
+  //   </Container>
+  // );
