@@ -86,32 +86,13 @@ const onDelete=(id)=>{
                     </small>
                   </p>
 
-                {/* Aman tried to create edit and delete buttons but didnt remember how to 
-                add event handler */}
+              
                   <button>Edit</button>
                   {/* pass in the id */}
                   <Link to="/:id"> 
                     <button onClick={()=>onDelete(contact._id)}>Delete</button>
                   </Link>
                   
-
-                  
-
-                  {/* <div class="card-footer">
-                    <Link
-                      to={`/cruds/${crud._id}/edit`}
-                      className="btn btn-primary"
-                    >
-                      Edit
-                    </Link>
-                    <span>
-                      <small>
-                        <Link to={`/cruds/${crud._id}`} className="link-line">
-                          Read More...
-                        </Link>
-                      </small>
-                    </span>
-                  </div> */}
                 </div>
               </div>
             </div>
