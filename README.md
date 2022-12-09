@@ -31,5 +31,7 @@ Include the following sections within the README.md:
 ☐ Next Steps: Planned future enhancements (icebox items).
 
 - Link to LinkedIn API
+
 - Link to Google Calender for more itegration
-- More feature for notes/forum, to share thoughts,
+
+- More feature for notes/forum, for users to share ideas
