@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const contacts = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({
 firstName: String,
 lastName: String,
 company: String,
@@ -13,7 +13,7 @@ email: String,
 
 
 })
-module.exports = mongoose.model("contacts", contacts)
+module.exports = mongoose.model("Contacts", contactSchema)
 
  //This model is for the schema for the new networking contacts
  

@@ -15,3 +15,6 @@ export async function update(credentials) {
   return sendRequest(`${BASE_URL}/update`, "POST", credentials);
 }
 
+export async function deleteContact(userData) {
+  return sendRequest(`${BASE_URL}/id  `, "DELETE", userData);
+}

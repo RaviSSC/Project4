@@ -9,8 +9,9 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 router.post('/', contactsCtrl.create);
 // POST /api/users/contact
 // router.post('/contacts/NewContact', contactsCtrl.login);
-router.get('/', contactsCtrl.getAllContact)
+router.get('/', contactsCtrl.getAllContact);
 
-router.delete('/:id', contactsCtrl.deleteContact)
+router.delete('/:id', contactsCtrl.deleteContact);
+router.patch('api/contacts/:id', contactsCtrl.updateContact);
 
 module.exports = router;
