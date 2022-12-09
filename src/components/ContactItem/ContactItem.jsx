@@ -47,6 +47,9 @@ const onDelete=(id)=>{
   axios.delete(`api/contacts/${id}`)
   .then(()=>{
     getData();
+ 
+ 
+ 
   })
 }
 
