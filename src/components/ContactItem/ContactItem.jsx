@@ -20,7 +20,6 @@ export default function ContactList() {
 		getContacts();
 	}, []);
 
-// aman thought the delete axios request would go here but isnt sure how to do it
 // get the id to delete/ edit item
 const setID=(_id)=>{
   console.log(_id)
